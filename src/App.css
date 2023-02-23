@@ -1,3 +1,11 @@
+
 .App {
-   text-align: center;
+	width: 100%;
+	background-color: #f5f6f7;
+}
+
+
+hr{
+	height: 10px;
+	background-color: transparent;
 }
