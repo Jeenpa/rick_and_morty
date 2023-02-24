@@ -1,7 +1,10 @@
-import './App.css'
-import Cards from './components/Card/Cards.jsx'
-import Nav from './components/Nav/Nav.js'
-import { useState } from 'react'
+import './App.css';
+import Cards from './components/Card/Cards.jsx';
+import Nav from './components/Nav/Nav.js';
+import About from './components/About/About.js';
+import Detail from './components/Detail/Detail.js'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 function App () {
 
@@ -23,25 +26,23 @@ function App () {
     setCharacters(
       characters.filter(character => character.id !== id)
     )
-
   }
 
 
   return (
 
-    <div className='App'>
+    <div className='App' style={{ padding: "25px" }}>
 
       <Nav onSearch={onSearch} />
 
-      <div>
-        <Cards
-          onClose={onClose}
-          characters={characters}
-        />
-      </div>
+      <Routes>
+        <Route path='/home' element={<Cards onClose={onClose} characters={characters} />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/detail/:detailId' element={<Detail />} />
+      </Routes>
 
     </div>
   )
 }
 
-export default App
+export default App;

@@ -15,6 +15,7 @@ import styled from './Card.module.css'
 			        species={character.species}
 			        gender={character.gender}
 			        image={character.image}
+                 id={character.id}
 			        onClose={() => onClose(character.id)} 
 			   		/>
    			})
