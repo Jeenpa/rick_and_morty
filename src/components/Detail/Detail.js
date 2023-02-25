@@ -29,6 +29,7 @@ function Detail () {
 
 	return(
 
+		//colocaMasDetallesSobreCadaCarta
 		<div>
 			<button><Link to='/home'>Home</Link></button>
 			<h1>{character?.name}</h1>

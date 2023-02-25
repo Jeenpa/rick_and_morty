@@ -6,10 +6,9 @@ import { Link } from 'react-router-dom';
  function Nav({onSearch}) {
 
  	return (
-
 		<div className={styled.container}>
-			<Link to='about'>About</Link>
-			<Link to='home'>Home</Link>
+			<Link to='/home'>Home</Link>
+			<Link to='/about'>About</Link>
 			<SearchBar onSearch={onSearch} />
 		</div>
 	)

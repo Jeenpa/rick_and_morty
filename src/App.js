@@ -4,11 +4,13 @@ import Nav from './components/Nav/Nav.js';
 import About from './components/About/About.js';
 import Detail from './components/Detail/Detail.js'
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Form from './components/Form/Form.js'
 
 function App () {
 
   const [characters, setCharacters] = useState([]);
+  const location = useLocation();
 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -30,10 +32,8 @@ function App () {
 
 
   return (
-
     <div className='App' style={{ padding: "25px" }}>
-
-      <Nav onSearch={onSearch} />
+      {location.pathname === '/' ? <Form /> : <Nav onSearch={onSearch} />}
 
       <Routes>
         <Route path='/home' element={<Cards onClose={onClose} characters={characters} />} />
