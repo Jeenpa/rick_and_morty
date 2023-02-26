@@ -1,0 +1,30 @@
+.container{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container button{
+	margin: 8px;
+}
+
+.containercard{
+	width: 60%;
+	display: flex;
+	background-color: black;
+	flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.containerdetalle{
+	display: flex;
+	color: white;
+	flex-direction: column;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: green;
+    margin: 1px;
+}

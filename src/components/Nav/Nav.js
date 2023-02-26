@@ -1,15 +1,30 @@
 import SearchBar from '../Search/SearchBar.jsx';
 import styled from './Nav.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
  function Nav({onSearch}) {
 
  	return (
-		<div className={styled.container}>
-			<Link to='/home'>Home</Link>
-			<Link to='/about'>About</Link>
+
+ 		
+
+		<div className={styled.containernav}>
+			<div className={styled.containertitulo}>
+				<h3>Rick and Morty</h3>
+			</div>
+
+			<div className={styled.containermenu}>
+			<button>
+			<NavLink to='/home'>Inicio</NavLink>
+			<NavLink to='/about'>Acerca de</NavLink>
+			<NavLink to=''>Cerrar sesión</NavLink>
+			</button>
+			</div>
+
+
 			<SearchBar onSearch={onSearch} />
+
 		</div>
 	)
 

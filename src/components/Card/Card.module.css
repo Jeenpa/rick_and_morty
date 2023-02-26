@@ -1,6 +1,5 @@
 .card{
-	width: 80px;
-	height: 140px;
+	width: 150px;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
@@ -12,24 +11,36 @@
 	box-shadow: 0 0 10px black;
 }
 
+
 .contenedor{
 	width: 100%;
-	display: flex;
-   	flex-direction: row;
-   	justify-content: center;
-   	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedorimg{
+	padding: 0;
+	margin: 0;
 }
 
 .image{
 	width: 100%;
-	margin-top: 4px;
+}
+
+.contenedortexto{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
 	color: white;
 	margin: 2px;
 	font-family: Lato, sans-serif;
-	font-size: 8px;
+	font-size: 11px;
 }
 
 .close{
@@ -42,4 +53,5 @@ h2{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 4px;
 }

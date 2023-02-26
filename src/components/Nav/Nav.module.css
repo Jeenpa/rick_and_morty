@@ -1,6 +1,31 @@
-.container{
+.containertitulo{
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	margin: 5px;
+	justify-content: flex-start;
+	margin: 20px;
+	font-family: 'Rampart One', cursiva;
+	font-size: 30px;
+	color: #0df316;
+}
+
+.containernav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 10px solid #d3d7d9a8;
+	height: 70px;
+	margin-bottom: 30px;
+	background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/54/51/18579ab243a14ba.jpg);
+}
+
+
+.containermenu button{
+	background-color: #a4ada445;
+}
+
+.containermenu a{
+	margin: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
 }

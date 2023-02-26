@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import styled from './Detail.module.css'
 
 function Detail () {
 
@@ -30,14 +31,22 @@ function Detail () {
 	return(
 
 		//colocaMasDetallesSobreCadaCarta
-		<div>
-			<button><Link to='/home'>Home</Link></button>
-			<h1>{character?.name}</h1>
-			<p>{character?.status}</p>
-			<p>{character?.species}</p>
-			<p>{character?.gender}</p>
-			<p>{character?.origin?.name}</p>
-			<img src={character?.image} alt={character.name} />
+		<div className={styled.container}>
+
+			<button>
+				<NavLink to='/home'>VOLVER</NavLink>
+			</button>
+			
+			<div className={styled.containercard}>
+				<img src={character?.image} alt={character.name} />
+				<div className={styled.containerdetalle}>
+					<p>Nombre: {character?.name}</p>
+					<p>Estado: {character?.status}</p>
+					<p>Especie: {character?.species}</p>
+					<p>Genero: {character?.gender}</p>
+					<p>Origen: {character?.origin?.name}</p>
+				</div>
+			</div>
 		</div>
 	)
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import validar from './Validation.js'
+import styled from './Form.module.css'
 
-function Form(){
+function Form({login}){
 
 	const [userData, setUserData] = useState({
 		username: '',
@@ -27,18 +28,28 @@ function Form(){
 
 	} 
 
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		login(userData);
+	}
+
 	return(
 
-		<form>
-			<label htmlFor='username'>Username</label>
-			<input type='text' onChange={handleInputChange} name='username' value={userData.username} />
-			{errors.username && <p style={{color: 'red'}}>{errors.username}</p>}
+		<form onSubmit={handleSubmit}>
 
-			<label htmlFor='password'>Password</label>
-			<input type='password' onChange={handleInputChange} name='password' value={userData.password} />
-			{errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
+			<div className={styled.contenedor}>
 
-			<button>LOGIN</button>
+				<h3>Ingrese sus datos para acceder a la aplicación</h3>
+				<label htmlFor='username'>Nombre de usuario:</label>
+				<input type='text' onChange={handleInputChange} name='username' value={userData.username} />
+				{errors.username && <p style={{color: 'red'}}>{errors.username}</p>}
+
+				<label htmlFor='password'>Contraseña:</label>
+				<input type='password' onChange={handleInputChange} name='password' value={userData.password} />
+				{errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
+
+				<button>Iniciar sesión</button>
+			</div>
 		</form>
 	
 	)
